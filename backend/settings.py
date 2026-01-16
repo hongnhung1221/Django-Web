@@ -11,6 +11,11 @@ DEBUG = False
 
 ALLOWED_HOSTS = ["*"]
 
+CORS_ALLOWED_ORIGINS = [
+    "https://animestore-flax.vercel.app",
+    "http://localhost:3000",
+]
+
 
 # Application definition
 
@@ -31,7 +36,6 @@ INSTALLED_APPS = [
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
-      
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     )
    
